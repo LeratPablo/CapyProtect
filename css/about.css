@@ -19,20 +19,16 @@ nav {
 }
 
 .navbar-brand {
-    /* padding-top: 0;
-    padding-left: 15px; */
     font-size: 32px;
     font-weight: lighter;
     color: #222;
 }
 
 .navbar-toggler {
-    /* margin-right: 15px; */
     border: 2px solid;
 }
 
 .nav-link {
-    /* padding-left: 15px; */
     font-size: 20px;
 }
 
@@ -50,4 +46,44 @@ nav {
 .P {
     font-size: 20px;
     text-align: center;
+}
+
+hr {
+    border: 10px solid #BDA18A;
+    opacity: 100%;
+}
+
+.row {
+    text-align: center;
+    transform: translateX(0);
+    transition: transform 3s ease-in;
+}
+
+.row.hide {
+    transform: translateX(100vw);
+}
+
+.row.hide:nth-of-type(even) {
+    transform: translateX(-100vw);
+}
+
+p {
+    font-size: 20px;
+}
+
+.center-image {
+    position: fixed;
+    opacity: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200%;
+    max-height: 200%;
+    width: 65%;
+    height: auto;
+    transition: opacity 10s ease;
+}
+
+.hide {
+    opacity: 0;
 }
