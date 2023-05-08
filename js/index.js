@@ -1,21 +1,15 @@
-$(document).ready(function() {
-    var windowHeight = $(window).height();
-    var isAnimatingFromRight = true;
+const boxes = document.querySelectorAll('.info');
 
-    function animateElements() {
-        var scrollPosition = $(window).scrollTop();
+window.addEventListener('scroll', checkBoxes);
+window.addEventListener('load', checkBoxes);
 
-        $(".info").each(function() {
-            var offsetTop = $(this).offset().top;
-
-            if (scrollPosition + windowHeight >= offsetTop) {
-                $(this).addClass("animated")
-                .addClass(isAnimatingFromRight ? "animate-from-right" : "animate-from-left");
-
-                isAnimatingFromRight = !isAnimatingFromRight;
-            }
-        });
-    }
-
-    $(window).on("load scroll", animateElements);
-});
+function checkBoxes() {
+    const triggerBottom = window.innerHeight / 5 * 4;
+    
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+            box.classList.add('show');
+        }
+    });
+}

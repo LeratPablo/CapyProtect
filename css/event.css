@@ -1,0 +1,70 @@
+/* General */
+* {
+    font-family: 'Darumadrop One', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+}
+
+/* Menu */
+nav {
+    background-color: #BDA18A;
+}
+
+.navbar-brand {
+    font-size: 32px;
+    font-weight: lighter;
+    color: #222;
+}
+
+.navbar-toggler {
+    border: 2px solid;
+}
+
+.nav-link {
+    font-size: 20px;
+}
+
+/* Content */
+
+.first {
+    margin-top: 100px;
+}
+
+.box {
+    border: 8px solid #BDA18A;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+hr {
+    opacity: 0;
+}
+
+input {
+    max-width: 30vw;
+}
+
+.submit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #222;
+    background-color: #BDA18A;
+    color: black;
+    transition: opacity 0.2s ease;
+}
+
+.submit:hover {
+    border: 2px solid #222;
+    background-color: #BDA18A;
+    color: black;
+    opacity: 60%;
+}

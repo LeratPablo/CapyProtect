@@ -45,8 +45,6 @@ nav {
 
 .catchphrase {
     text-align: center;
-    /* font-size: 21px;
-    font-weight: bolder; */
 }
 
 .P {
@@ -78,49 +76,21 @@ nav {
     max-height: auto;
 }
 
-/* Styles pour les éléments avec la classe "info" */
+hr {
+    border: 10px solid #BDA18A;
+    opacity: 100%;
+}
+
+/* Animations */
 .info {
-    opacity: 0; /* Les éléments sont initialement invisibles */
+    transform: translateX(100vw);
+    transition: transform 0.6s ease;
+}
 
-    transition: opacity 0.8s, transform 0.8s ease; /* Transition de l'animation */
-  }
-  
-  /* Styles pour les éléments animés */
-  .info.animated {
-    opacity: 1; /* Rendre les éléments visibles lors de l'animation */
-    transform: translateX(0); /* Animation pour décaler les éléments vers la gauche */
-  }
+.info:nth-of-type(even) {
+    transform: translateX(-100vw);
+}
 
-  .animate-from-right {
-    animation: animate-right 0.5s ease;
-    opacity: 1;
+.info.show {
     transform: translateX(0);
-}
-
-.animate-from-left {
-    animation: animate-left 0.5s ease;
-    opacity: 1;
-    transform: translateX(0);
-}
-
-@keyframes animate-right {
-    from {
-        opacity: 0;
-        transform: translateX(100vw);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes animate-left {
-    from {
-        opacity: 0;
-        transform: translateX(-100vw);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
