@@ -18,7 +18,8 @@ function displayVideo() {
         overlay.style.zIndex = "9999"; // Mettre la vidéo au premier plan
 
         var iframe = document.createElement("iframe"); // On créer un iframe pour inscruster une vidéo / On créer un élément
-        iframe.src = embedUrl + "?autoplay=1"; // On ajoute un paramètre pour que la vidéo se lance automatiquement
+        iframe.src = embedUrl + "?&autoplay=1"; // On ajoute un paramètre pour que la vidéo se lance automatiquement
+        iframe.allow = "autoplay";
         iframe.allowFullscreen = false; // On interdit le plein écran
         iframe.style.width = "100%";
         iframe.style.height = "100%";
